@@ -271,8 +271,8 @@ def main():
     log.info(f'Checking for {config.BOT_DATA_DIR}...')
     if not path.exists(config.BOT_DATA_DIR):
         raise Exception(f'The data directory "{config.BOT_DATA_DIR}" for the bot does not exist.')
-    if not access(config.BOT_DATA_DIR, W_OK):
-        raise Exception(f'The data directory "{config.BOT_DATA_DIR}" should be writable for the bot.')
+    #if not access(config.BOT_DATA_DIR, W_OK):
+    #    raise Exception(f'The data directory "{config.BOT_DATA_DIR}" should be writable for the bot.')
 
     if (not ON_WINDOWS) and args['daemon']:
         if args['backend'] == 'Text':
